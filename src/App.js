@@ -93,11 +93,10 @@ Pure white studio background. Full body front-facing view, head to toe visible. 
 // ─── Gemini API ───────────────────────────────────────────────────────────────
 async function callGemini(apiKey, prompt, collarPhoto, onStatus) {
   const MODELS = [
-    "gemini-2.5-flash-preview-image-generation",
-    "gemini-2.5-flash-image",
-    "gemini-2.0-flash-preview-image-generation",
-    "gemini-2.0-flash-exp",
-  ];
+  "gemini-2.5-flash-image",
+  "gemini-3.1-flash-image-preview",
+  "gemini-2.5-flash-preview-image-generation",
+];
   const parts = [];
   if (collarPhoto) parts.push({ inline_data: { mime_type: "image/jpeg", data: collarPhoto } });
   parts.push({ text: prompt });
